@@ -10,16 +10,16 @@ int p3x = A4;
 int p3y = A5;
 int p4x = A6;
 int p4y = A7;
-int n1 = 0;
-int n2 = 0;
-int n3 = 0;
-int n4 = 0;
-int ran = 0;
+int n1 = 0;//Positions Offset Player 1
+int n2 = 0;//Positions Offset Player 2
+int n3 = 0;//Positions Offset Player 3
+int n4 = 0;//Positions Offset Player 4
+int ran = 0;//Zufällige Münz-Position
 int game = 1;
-int score1 = 0;
-int score2 = 0;
-int score3 = 0;
-int score4 = 0;
+int score1 = 0;//Score Player 1
+int score2 = 0;//Score Player 2
+int score3 = 0;//Score Player 3
+int score4 = 0;//Score Player 4
 int select = 3;
 float countcoin = 0;
 int dotdelay = 10;
@@ -58,7 +58,8 @@ void ledupdatep1() {
   for (int i = 100; i < 149; i++) {  //draw player 1
 
     if (i == 100 || i == 101||i==149||i==148) {
-      led.setPixelColor(i + n1, led.Color(255, 0, 0));
+if(i+n1 <0&&i+n1 > MAXLED){
+      led.setPixelColor(i + n1, led.Color(255, 0, 0));}
     }
   }
 }
