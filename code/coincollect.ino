@@ -21,8 +21,8 @@ int score2 = 0;//Score Player 2
 int score3 = 0;//Score Player 3
 int score4 = 0;//Score Player 4
 int select = 3;
-float countcoin = 0;
-int dotdelay = 10;
+float countcoin = 0;//Countdown für Münze wird erhöht
+int dotdelay = 10;//Countdown für Münze ende
 void setup() {
   Serial.begin(9600);
   led.begin();
@@ -200,11 +200,15 @@ void checkwin() {
       led.setPixelColor(i, led.Color(255, 0, 0));
     }
     led.show();
+//Rücksetzen der werte
     n1 = 0;
     n2 = 0;
     n3 = 0;
     n4 = 0;
     score1 = 0;
+    score2 = 0;
+    score3 = 0;
+    score4 = 0;
     delay(1000);
   }
   if (score2 >= 5) {  //Player 2 win screen
@@ -212,11 +216,15 @@ void checkwin() {
       led.setPixelColor(i, led.Color(0, 255, 0));
     }
     led.show();
+//Rücksetzen der werte
     n1 = 0;
     n2 = 0;
     n3 = 0;
     n4 = 0;
     score1 = 0;
+    score2 = 0;
+    score3 = 0;
+    score4 = 0;
     delay(1000);
   }
   if (score3 >= 5) {  //Player 3 win screen
@@ -224,11 +232,15 @@ void checkwin() {
       led.setPixelColor(i, led.Color(0, 0, 255));
     }
     led.show();
+//Rücksetzen der werte
     n1 = 0;
     n2 = 0;
     n3 = 0;
     n4 = 0;
     score1 = 0;
+    score2 = 0;
+    score3 = 0;
+    score4 = 0;
     delay(1000);
   }
   if (score4 >= 5) {  //Player 4 win screen
@@ -236,11 +248,15 @@ void checkwin() {
       led.setPixelColor(i, led.Color(255, 255, 255));
     }
     led.show();
-     n1 = 0;
+//Rücksetzen der werte
+    n1 = 0;
     n2 = 0;
     n3 = 0;
     n4 = 0;
     score1 = 0;
+    score2 = 0;
+    score3 = 0;
+    score4 = 0;
     delay(1000);
   }
 }
