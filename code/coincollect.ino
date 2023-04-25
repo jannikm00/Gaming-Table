@@ -182,14 +182,14 @@ void coin() {
 //Player 3 check coin
     if (101 + n3 == ran || 100 + n3 == ran||149 + n1 == ran || 148 + n1 == ran) {
       score3++;
-            Serial.println(score3);
+      Serial.println(score3);
       countcoin = dotdelay;
     }
   
 //Player 4 check coin
     if (101 + n4 == ran || 100 + n4 == ran||149 + n1 == ran || 148 + n1 == ran) {
       score4++;
-            Serial.println(score4);
+      Serial.println(score4);
       countcoin = dotdelay;
     } 
 }
